@@ -4,8 +4,7 @@
 }
 
 body {
-  color: aliceblue;
-  font-size: large;
+  font-size: 1.5rem;
   background: #000;
   display: flex;
   flex-direction: column;
@@ -25,7 +24,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 3rem;
+  gap: 2rem;
   font-family: "Bungee", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -50,8 +49,8 @@ img {
   display: inline-block;
 
   box-sizing: border-box;
-  animation: rotation 5s linear infinite;
-  filter: drop-shadow(0 0 1.5em white);
+
+  filter: drop-shadow(0 0 1.5em #0c485d);
 }
 
 .social-container {
@@ -64,21 +63,30 @@ img {
 }
 
 .logo {
-  background: #fff;
   width: 50px;
   height: 50px;
-  border: none 0px;
-  border-radius: 100%;
+  padding: 12px;
+  background: #fff;
+  border-radius: 50%;
   display: inline-block;
   box-sizing: border-box;
+  background-size: contain;
+}
+
+.logo img {
+  width: 100%;
+  height: 100%;
 }
 
 .social-textbox {
+  margin-top: 80px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 1rem;
+  text-decoration: none;
+  color: #fff;
 }
 
 @media screen and (max-width: 768px) {
@@ -87,8 +95,32 @@ img {
     height: 150px;
   }
 
+  .container {
+    gap: 1rem;
+  }
+
   body {
     font-size: small;
-    background-position-x: 1050px;
+    background-size: cover;
+  }
+
+  .social-container {
+    position: absolute;
+    bottom: 20px;
+    flex-direction: row;
+    gap: 3rem;
+    width: fit-content;
+    font-size: small;
+  }
+
+  .logo {
+    width: 30px;
+    height: 30px;
+    padding: 6px;
+  }
+
+  .logo img {
+    width: 100%;
+    height: 100%;
   }
 }
